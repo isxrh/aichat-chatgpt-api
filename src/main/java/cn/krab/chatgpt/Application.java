@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-@RestController
+//@RestController
 public class Application {
     private Logger logger = LoggerFactory.getLogger(Application.class);
 
@@ -18,18 +18,18 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
-    @GetMapping("/verify")
-    public ResponseEntity<String> verify(String token) {
-        logger.info("验证 token：{}", token);
-        if ("success".equals(token)){
-            return ResponseEntity.status(HttpStatus.OK).build();
-        } else {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
-        }
-    }
-
-    @GetMapping("/success")
-    public String success(){
-        return "test success by krab";
-    }
+//    @GetMapping("/verify")
+//    public ResponseEntity<String> verify(String token) {
+//        logger.info("验证 token：{}", token);
+//        if ("success".equals(token)){
+//            return ResponseEntity.status(HttpStatus.OK).build();
+//        } else {
+//            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+//        }
+//    }
+//
+//    @GetMapping("/success")
+//    public String success(){
+//        return "test success by krab";
+//    }
 }
